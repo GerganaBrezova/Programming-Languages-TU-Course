@@ -23,7 +23,8 @@ The project contains the following classes:
 
 # UML Class Diagram
 
-  class Taxi {
+  classDiagram
+    class Taxi {
         - string brand
         - string model
         - int year
@@ -42,9 +43,9 @@ The project contains the following classes:
         + setSeats(int)
         + setCapacity(double)
         + setFuelConsumption(double)
-  }
+    }
 
-  class Route {
+    class Route {
         - vector<string> stops
         - double lengthKm
         - int dailyRuns
@@ -54,9 +55,9 @@ The project contains the following classes:
         + setStops(vector<string>)
         + setLengthKm(double)
         + setDailyRuns(int)
-  }
+    }
 
-  class Application {
+    class Application {
         - vector<Taxi> taxis
         - vector<Route> routes
         + addTaxi() void
@@ -65,7 +66,11 @@ The project contains the following classes:
         + saveTaxisToFile() void
         + saveRoutesToFile() void
         + menu() void
-  }
+    }
+
+    Application --> Taxi
+    Application --> Route
+
 
 # Class Descriptions
 
