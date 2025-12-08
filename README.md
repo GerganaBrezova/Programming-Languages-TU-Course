@@ -22,62 +22,50 @@ The project contains the following classes:
 - Application – handles user interaction and the application menu
 
 # UML Class Diagram
-+---------------------------+
-|          Taxi             |
-+---------------------------+
-| - brand: string           |
-| - model: string           |
-| - year: int               |
-| - seats: int              |
-| - capacity: double        |
-| - fuelConsumption: double |
-+---------------------------+
-| + getBrand(): string      |
-| + getModel(): string      |
-| + getYear(): int          |
-| + getSeats(): int         |
-| + getCapacity(): double   |
-| + getFuelConsumption():double |
-| + setBrand(string)        |
-| + setModel(string)        |
-| + setYear(int)            |
-| + setSeats(int)           |
-| + setCapacity(double)     |
-| + setFuelConsumption(double) |
-| + operator<<              |
-+---------------------------+
 
+  class Taxi {
+        - string brand
+        - string model
+        - int year
+        - int seats
+        - double capacity
+        - double fuelConsumption
+        + getBrand() string
+        + getModel() string
+        + getYear() int
+        + getSeats() int
+        + getCapacity() double
+        + getFuelConsumption() double
+        + setBrand(string)
+        + setModel(string)
+        + setYear(int)
+        + setSeats(int)
+        + setCapacity(double)
+        + setFuelConsumption(double)
+  }
 
-+---------------------------+
-|          Route            |
-+---------------------------+
-| - stops: vector<string>   |
-| - lengthKm: double        |
-| - dailyRuns: int          |
-+---------------------------+
-| + getStops(): vector<string> |
-| + getLengthKm(): double   |
-| + getDailyRuns(): int     |
-| + setStops(vector<string>)|
-| + setLengthKm(double)     |
-| + setDailyRuns(int)       |
-| + operator<<              |
-+---------------------------+
+  class Route {
+        - vector<string> stops
+        - double lengthKm
+        - int dailyRuns
+        + getStops() vector<string>
+        + getLengthKm() double
+        + getDailyRuns() int
+        + setStops(vector<string>)
+        + setLengthKm(double)
+        + setDailyRuns(int)
+  }
 
-
-+--------------------------------------+
-|            Application               |
-+--------------------------------------+
-| - taxis: vector<Taxi>                |
-| - routes: vector<Route>              |
-+--------------------------------------+
-| + addTaxi(): void                    |
-| + addRoute(): void                   |
-| + assignRoute(): void                |
-| + saveTaxisToFile(): void            |
-| + saveRoutesToFile(): void           |
-| + menu(): void                       |
-+--------------------------------------+
+  class Application {
+        - vector<Taxi> taxis
+        - vector<Route> routes
+        + addTaxi() void
+        + addRoute() void
+        + assignRoute() void
+        + saveTaxisToFile() void
+        + saveRoutesToFile() void
+        + menu() void
+  }
 
 # Class Descriptions
 
