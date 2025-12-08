@@ -23,7 +23,7 @@ The project contains the following classes:
 
 # UML Class Diagram
 
-  classDiagram
+    classDiagram
     class Taxi {
         - string brand
         - string model
@@ -67,10 +67,6 @@ The project contains the following classes:
         + saveRoutesToFile() void
         + menu() void
     }
-
-    Application --> Taxi
-    Application --> Route
-
 
 # Class Descriptions
 
