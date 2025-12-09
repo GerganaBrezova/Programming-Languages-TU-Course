@@ -104,6 +104,7 @@ Responsibilities:
 # How to Run the Program
 
 Run the application: ./app
+
 Use the menu to navigate:
 - Add a taxi
 - Add a route
