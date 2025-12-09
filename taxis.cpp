@@ -65,7 +65,6 @@ double readDouble(const string &prompt, double minVal = 0)
         cout << prompt;
         getline(cin, input);
 
-        // Validate format (optional decimal point, no plus sign)
         bool valid = true;
         bool decimalPointUsed = false;
 
@@ -77,7 +76,7 @@ double readDouble(const string &prompt, double minVal = 0)
             {
                 valid = false;
                 break;
-            } // no negative
+            } 
             if (isdigit(c))
                 continue;
 
